@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.small-screen {
+  display: none;
+}
+
+.header {
+  background-color: #011827;
+  width: auto;
+  height: 3.5%;
+}
+.header__div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.header__logo {
+  width: 128px;
+  height: 82px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 27px;
+  margin-right: 10px;
+}
+.header__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  width: 78px;
+  height: 84px;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 35px;
+}
+.header__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  width: 78px;
+  height: 84px;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 35px;
+}
+
+.hackerBackground {
+  width: 100%;
+  height: 274px;
+}
+@media (min-width: 950px) {
+  .hackerBackground {
+    height: 10%;
+  }
+}
+
+.btnSection__onSite {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  height: 66px;
+  width: 308px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  border: none;
+  border-radius: 5px;
+  background-color: #8ACFE5;
+  color: #011827;
+}
+.btnSection__online {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #36769D;
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.reviewSection {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 439px;
+  height: 139px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px;
+}
+.reviewSection__quote {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  width: 343.26px;
+  height: 139px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.reviewSection__date {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  grid-column-start: 2;
+  margin-top: 0;
+}
+
+.challengesSection {
+  height: 480px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 1px;
+  margin-left: 20px;
+}
+.challengesSection__headerText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 125px;
+}
+.challengesSection__box {
+  display: flex;
+  flex-direction: column;
+  width: 363px;
+  height: 446px;
+  margin-left: 52.07px;
+  margin-right: 15px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.challengesSection__img {
+  width: 363px;
+  height: 219px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.challengesSection__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  width: 308px;
+  height: 33px;
+  margin-left: 18px;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.challengesSection__starSection {
+  display: flex;
+  margin-left: 18px;
+  gap: 5px;
+}
+.challengesSection__star {
+  width: 15x;
+  height: 18px;
+}
+.challengesSection__participants {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  margin: auto;
+  margin-left: 5px;
+}
+.challengesSection__info {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  margin-left: 18px;
+  margin-top: 23px;
+  margin-right: 18px;
+}
+.challengesSection__btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.challengesSection__btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  background-color: #E3170A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 179.28px;
+  height: 44px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.storySection {
+  display: block;
+  margin-top: 10%;
+  width: 480px;
+  height: 500px;
+  background-color: #011827;
+}
+.storySection__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20%;
+}
+.storySection__btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  width: 308px;
+  height: 66px;
+  background-color: transparent;
+  border: 1.5px solid #8ACFE5;
+  color: #8ACFE5;
+  border-radius: 5px;
+  margin-left: 90px;
+  margin-top: 30px;
+}
+
+.friendsSection__img {
+  width: 480px;
+  height: 300px;
+}
+.friendsSection__headerText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5%;
+}
+.friendsSection__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.friendsSection__btn {
+  background-color: #E3170A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  width: 308px;
+  height: 66px;
+  margin-left: 21px;
+  margin-bottom: 64px;
+  margin-top: 58px;
+}
+
+.onlineSection__img {
+  width: 480px;
+  height: 300px;
+}
+.onlineSection__headerText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  width: 435px;
+  height: 106px;
+  margin-left: 21px;
+  margin-right: 21px;
+}
+.onlineSection__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  width: 435px;
+  height: 112px;
+  margin-left: 21px;
+  margin-right: 21px;
+}
+.onlineSection__btn {
+  background-color: #E3170A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  height: 66px;
+  width: 308px;
+  margin-left: 21px;
+}
+
+.footerSection {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #011827;
+  height: 566px;
+  width: 480px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.footerSection__info__headerText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  padding-top: 64px;
+  margin-left: 22px;
+}
+.footerSection__info p {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.footerSection__siteMap {
+  margin-top: 0px;
+  padding: 0px;
+  margin-left: 22px;
+}
+.footerSection__siteMap__headerText {
+  padding-top: 5px;
+  margin: 0;
+}
+.footerSection__socialMedia {
+  margin-left: 22px;
+}
+.footerSection__socialMedia__headerText {
+  padding-top: 5px;
+  margin: 0;
+}
+.footerSection ul {
+  padding-left: 0;
+}
+.footerSection li {
+  list-style-type: none;
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
