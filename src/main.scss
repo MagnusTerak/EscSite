@@ -6,7 +6,8 @@ $dark-blue: #011827;
 $blue: #36769D;
 $grey: #B6BDB5;
 
-$layout-breakpoint-large: 950px;
+$layout-breakpoint-large: 1200px;
+$layout-breakpoint-small: 900px;
 
 @mixin regular-font {
     font-family: "Roboto", sans-serif;
@@ -33,80 +34,135 @@ $layout-breakpoint-large: 950px;
     border-radius: 5px;
 }
 
-* {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-html {
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-}
-
+html,
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 24px;
+  max-width: 1920px;
+  min-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.small-screen {
+.bigScreen {
     display: none;
+
+    @media (min-width: $layout-breakpoint-large) {
+        display: block;
+    }
 }
 
 .header {
     background-color: $dark-blue;
-    width: auto;
-    height: 3.5%;
 
     &__div {
-        height: 100%;
+        width: 50%;
         display: flex;
-        flex-direction: row;
+        justify-content: flex-start;
     }
 
     &__logo { 
         width: 128px;
         height: 82px;
-        margin-top: auto;
-        margin-bottom: auto;
         margin-left: 27px;
-        margin-right: 10px;
+        margin-top: 26px;
+
+        @media (min-width: $layout-breakpoint-large) {
+        }
     }
 
     &__text {
         @include bold-font();
         color: #FFFFFF;
-        width: 78px;
-        height: 84px;
-        font-size: 24px;
-        line-height: 24px;
-        margin-top: 35px;
-    }
+        font-size: 1rem;
+        width: 20%;
+        margin-left: 0.8rem;
+        margin-top: 1rem;
 
-    &__text {
-        @include bold-font();
-        color: #FFFFFF;
-        width: 78px;
-        height: 84px;
-        font-size: 24px;
-        line-height: 24px;
-        margin-top: 35px;
+        @media (min-width: $layout-breakpoint-large) {
+            width: 100%;
+            font-size: 1.6rem;
+            margin-top: 2.7rem;
+        }
     }
 }
 
-.hackerBackground {
-    width: 100%;
-    height: 274px;
+@media (min-width: $layout-breakpoint-large) { 
+    .header {
+        &__nav {
+            background-color: $dark-blue;
+            display: block;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+    
+            &__list {
+                @include bold-font();
+                display: flex; 
+                justify-content: space-evenly;
+                list-style: none;
+                color: white;
+                margin: 0;
+        
+                &__item {
+                    font-size: 1rem;
+                    
+                    &:hover{
+                        color: #8ACFE5;
+                    }
+                }
+            }
+        }
+    }
+}
 
-    @media (min-width: $layout-breakpoint-large) {
-        height: 10%;
+@media (max-width: $layout-breakpoint-large) { 
+    .header {
+        &__nav {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-large) {
+    .hackerBackground {
+        width: 100%;
+        min-height: 274px;
+        object-fit: cover;
+  
+        &__desktop {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $layout-breakpoint-large) {
+    .hackerBackground {
+        display: none;
+        
+        &__desktop {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            min-height: 468px;
+        }
     }
 }
 
 .btnSection {
+    @media (min-width: $layout-breakpoint-large) {
+        display: flex;
+        margin-top: -1.5rem;
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: row-reverse;
+    }
+
     &__onSite {
         @include bold-font();
-        font-size: 24px;
+        font-size: 1rem;
     
         height: 66px;
         width: 308px;
@@ -119,11 +175,15 @@ body {
         border-radius: 5px;
         background-color: $primary-btn-on-dark;
         color: $dark-blue;
+
+        @media (min-width: $layout-breakpoint-large) {
+            margin: 0;
+        }
     }
 
     &__online {
         @include bold-font();
-        font-size: 16px;
+        font-size: 0.67rem;
         text-decoration: underline;
         
         color: $blue;
@@ -133,49 +193,83 @@ body {
         display: block;
         margin: auto;
         margin-top: 5%;
+
+        @media (min-width: $layout-breakpoint-large) {
+            @include primary-btn();
+            font-size: 1rem;
+            text-decoration: none;
+            height: 66px;
+            width: 308px;
+
+            margin: 0;            
+        }
     }
 }
 
 .reviewSection {
-    margin-top: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 439px;
-    height: 139px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0px;
-
-    &__quote {
-        @include italic-font();
-        font-size: 24px;
-        width: 343.26px;
-        height: 139px;
-        margin-top: 0;
-        margin-bottom: 0;
+    @media (min-width: $layout-breakpoint-large) {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        padding: 0 5rem;
+        margin-bottom: 6rem;
     }
 
-    &__date {
-        @include regular-font();
-        font-size: 18px;
-    
-        grid-column-start: 2;
-        margin-top: 0;
+    .bigScreen {
+        @media (max-width: $layout-breakpoint-large) {
+            display: none;
+        }
+    }
+
+    &__figure {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        margin-top: 4rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+        &__img {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            width: 96px;
+            height: 96px;
+        }
+
+        &__quote {
+            @include italic-font();
+            font-size: 1rem;
+            grid-column: 3 / span 4;
+            grid-row: 1 / span 3;
+            margin: 0 0rem 0.5rem 1rem;
+        }
+
+        &__caption {
+            @include regular-font();
+            font-size: 0.75rem;
+            grid-column: 3 / span 4;
+            grid-row: 4 / span 1;
+            margin: 0;
+            margin-left: 1rem;
+        }
     }
 }
 
 .challengesSection {
     height: 480px;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     gap: 1px;
     margin-left: 20px;
 
+    @media (min-width: $layout-breakpoint-large) {
+        justify-content: center;
+        padding: 4rem 0 5rem 0;
+    }
+
     &__headerText {
         @include regular-font();
-        font-size: 32px;
+        font-size: 1.33rem;
     
         text-align: center;
         margin-top: 125px;
@@ -203,7 +297,7 @@ body {
 
     &__text {
         @include regular-font();
-        font-size: 28px;
+        font-size: 1.17rem;
         width: 308px;
         height: 33px;
         margin-left: 18px;
@@ -224,7 +318,7 @@ body {
 
     &__participants {
         @include regular-font();
-        font-size: 14px;
+        font-size: 0.58rem;
     
         margin: auto;
         margin-left: 5px;
@@ -232,7 +326,7 @@ body {
 
     &__info {
         @include regular-font();
-        font-size: 18px;
+        font-size: 0.75rem;
         margin-left: 18px;
         margin-top: 23px;
         margin-right: 18px;
@@ -245,7 +339,7 @@ body {
     
     &__btn {
         @include bold-font();
-        font-size: 16px;
+        font-size: 0.66rem;
     
         @include primary-btn();
     
@@ -259,21 +353,25 @@ body {
 .storySection {
     display: block;
     margin-top: 10%;
-    width: 480px;
     height: 500px;
     background-color: $dark-blue;
 
     &__text {
         @include regular-font();
-        font-size: 28px;
+        font-size: 1.17rem;
         color: #ffffff;
         text-align: center;
-        padding-top: 20%;
+        padding-top: 4rem;
+
+        @media (min-width: $layout-breakpoint-large) {
+            width: 50%;
+            margin: auto;
+        }
     }
 
     &__btn {
         @include bold-font();
-        font-size: 24px; 
+        font-size: 1rem; 
     
         width: 308px;
         height: 66px;
@@ -281,76 +379,143 @@ body {
         border: 1.5px solid $primary-btn-on-dark;
         color: $primary-btn-on-dark;
         border-radius: 5px;
-        margin-left: 90px;
-        margin-top: 30px;
+        display: block;
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
 .friendsSection {
     &__img {
-        width: 480px;
-        height: 300px;
+        width: 100%;
+        object-fit: cover
+    }
+
+    .friendsSection__container {
+        &__headerText {
+            @include bold-font();
+            font-size: 1.33rem;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 5%;
+        }
+        
+        &__text {
+            @include regular-font();
+            font-size: 1rem;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        &__btn {
+            @include primary-btn();
+            @include bold-font();
+            font-size: 1rem;
+            width: 308px;
+            height: 66px;
+            margin-left: 21px;
+            margin-bottom: 64px;
+            margin-top: 58px;
+        }
     }
     
-    &__headerText {
-        @include bold-font();
-        font-size: 32px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 5%;
-    }
-    
-    &__text {
-        @include regular-font();
-        font-size: 24px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    
-    &__btn {
-        @include primary-btn();
-        @include bold-font();
-        font-size: 24px;
-        width: 308px;
-        height: 66px;
-        margin-left: 21px;
-        margin-bottom: 64px;
-        margin-top: 58px;
+
+    @media (min-width: $layout-breakpoint-large) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .friendsSection__container {
+            padding-left: 20%;
+            padding-top: 2vw;
+            padding-right: 20%;
+
+            &__headerText {
+                margin: 0 0 1rem 0;
+            }
+            
+            &__text {
+                margin: 1rem 0 1rem 0;
+            }
+
+            &__btn {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 }
 
 .onlineSection {
     &__img {
-        width: 480px;
-        height: 300px;
+        width: 100%;
+        object-fit: cover
     }
-    
-    &__headerText {
-        @include bold-font();
-        font-size: 32px;
-        width: 435px;
-        height: 106px;
-        margin-left: 21px;
-        margin-right: 21px;
+
+    .onlineSection__container {
+        &__headerText {
+            @include bold-font();
+            font-size: 1.33rem;
+            width: 435px;
+            height: 106px;
+            margin-left: 21px;
+            margin-right: 21px;
+        }
+        
+        &__text {
+            @include regular-font();
+            font-size: 1rem;
+            width: 435px;
+            height: 112px;
+            margin-left: 21px;
+            margin-right: 21px;
+        }
+        
+        &__btn {
+            @include primary-btn();
+            @include bold-font();
+            font-size: 1rem;
+        
+            height: 66px;
+            width: 308px;
+            margin-left: 21px;
+        }
     }
-    
-    &__text {
-        @include regular-font();
-        font-size: 24px;
-        width: 435px;
-        height: 112px;
-        margin-left: 21px;
-        margin-right: 21px;
-    }
-    
-    &__btn {
-        @include primary-btn();
-        @include bold-font();
-        font-size: 24px;
-    
-        height: 66px;
-        width: 308px;
-        margin-left: 21px;
+
+    @media (min-width: $layout-breakpoint-large) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            grid-area: 1 / 2;
+        }
+
+        .onlineSection__container {
+            grid-area: 1 / 1;
+            padding-left: 5rem;
+            padding-top: 1rem;
+            padding-right: 5rem;
+
+            &__headerText {
+                margin: 0 0 1rem 0;
+            }
+            
+            &__text {
+                margin: 1rem 0 1rem 0;
+            }
+
+            &__btn {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 }
 
@@ -359,16 +524,16 @@ body {
 
     background-color: $dark-blue;
     height: 566px;
-    width: 480px;
+    margin-top: 2rem;
 
-    font-size: 18px;
+    font-size: 0.75rem;
     color: #ffffff;
 
     &__info {
         &__headerText {
             @include bold-font();
-            font-size: 18px;
-            padding-top: 64px;
+            font-size: 0.75rem;
+            padding-top: 3rem;
             margin-left: 22px;
         }
 
@@ -384,6 +549,8 @@ body {
         margin-left: 22px;
 
         &__headerText {
+            @include bold-font();
+            font-size: 0.75rem;
             padding-top: 5px;
             margin: 0;
         }
@@ -393,6 +560,8 @@ body {
         margin-left: 22px;
 
         &__headerText {
+            @include bold-font();
+            font-size: 0.75rem;
             padding-top: 5px;
             margin: 0; 
         }
@@ -405,5 +574,24 @@ body {
     li {
         list-style-type: none;
         margin: 0;
+    }
+
+    @media (min-width: $layout-breakpoint-large) { 
+        display: flex;
+        padding: 5rem;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &__info {
+            max-width: 20rem;
+        }
+
+        &__siteMap, &__socialMedia {
+            margin-top: 3.5rem;
+            margin-left: 1rem;
+            margin-right: 5rem;
+        }
+
+        
     }
 }

@@ -14,9 +14,19 @@
                     <img class="header__logo" src="src/images/esc-logo.png" alt="Header Logo"></img>
                     <h1 class="header__text">Hacker Escape Rooms</h1>
                 </div>
+                
+                <nav class="header__nav bigScreen">
+                    <ul class="header__nav__list">
+                        <li class="header__nav__list__item">Play online</li>
+                        <li class="header__nav__list__item">Play on-site</li>
+                        <li class="header__nav__list__item">The story</li>
+                        <li class="header__nav__list__item">Contact us</li>
+                    </ul>
+                </nav>
             </header>
 
             <img class="hackerBackground" src="src/images/main-background.png" alt="Main Background"></img>
+            <img class="hackerBackground__desktop" src="src/images/mani-background-pc.png" alt="Main Background"></img>
 
             <!-- Buttons sections -->
             <section class="btnSection">
@@ -26,13 +36,21 @@
 
             <!-- Review section -->
             <section class="reviewSection">
-                <img class="reviewSection__avatar" src="src/images/avatar.png">
-                <p class="reviewSection__quote">This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</p>
-                <p class="reviewSection__date">John Doe, visited us in September 2021</p>
+                <figure class="reviewSection__figure">
+                    <img class="reviewSection__figure__img" src="/src/images/avatar.png">
+                    <blockquote class="reviewSection__figure__quote">This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</blockquote>
+                    <figcaption class="reviewSection__figure__caption">John Doe, visited us in September 2021</figcaption>
+                </figure>
+
+                <figure class="reviewSection__figure bigScreen">
+                    <img class="reviewSection__figure__img" src="/src/images/avatar.png">
+                    <blockquote class="reviewSection__figure__quote">This is a quote about how amazing this place is and how much fun me and my friends had when we tried it</blockquote>
+                    <figcaption class="reviewSection__figure__caption">John Doe, visited us in September 2021</figcaption>
+                </figure>
             </section>
 
             <!-- Challenges section -->
-            <h3 class="challengesSection__headerText">Popular challenges right now</h3>
+            <h2 class="challengesSection__headerText">Popular challenges right now</h2>
 
             <section class="challengesSection">
                 <box class="challengesSection__box">
@@ -105,28 +123,32 @@
             <!-- Friends section -->
             <section class="friendsSection">
                 <img class="friendsSection__img" src="src/images/friends.png">
-                <h3 class="friendsSection__headerText">Play with your friends or build your team stronger at work</h3>
-                <p class="friendsSection__text">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
-                <button class="friendsSection__btn">Book on-site today</button>
+                <div class="friendsSection__container">
+                    <h2 class="friendsSection__container__headerText">Play with your friends or build your team stronger at work</h2>
+                    <p class="friendsSection__container__text">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+                    <button class="friendsSection__container__btn">Book on-site today</button>
+                </div>
             </section>
 
             <!-- Play online section -->
             <section class="onlineSection">
                 <img class="onlineSection__img" src="src/images/online.png">
-                <h3 class="onlineSection__headerText">Play online or visit our venue for one of our 25 escape rooms</h3>
-                <p class="onlineSection__text">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
-                <button class="onlineSection__btn">See all challenges</button>
+                <div class="onlineSection__container">
+                    <h2 class="onlineSection__container__headerText">Play online or visit our venue for one of our 25 escape rooms</h2>
+                    <p class="onlineSection__container__text">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi erit, et non inimicos, et</p>
+                    <button class="onlineSection__container__btn">See all challenges</button>
+                </div>
             </section>
 
             <!-- Footer section -->
             <footer class="footerSection">
                 <section class="footerSection__info">
-                    <h3 class="footerSection__info__headerText">[Esc] Hacker Escape Rooms</h3>
+                    <h2 class="footerSection__info__headerText">[Esc] Hacker Escape Rooms</h2>
                     <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
                 </section>
 
                 <section class="footerSection__siteMap">
-                    <h3 class="footerSection__siteMap_headerText">Site map</h3>
+                    <h2 class="footerSection__siteMap__headerText">Site map</h2>
                     
                     <ul>
                         <li href="">The Story</li>
@@ -141,7 +163,7 @@
                 </section>
 
                 <section class="footerSection__socialMedia">
-                    <h3 class="footerSection__socialMedia_headerText">Follow us on</h3>
+                    <h2 class="footerSection__socialMedia__headerText">Follow us on</h2>
                     
                     <ul>
                         <li href="">Facebook</li>
