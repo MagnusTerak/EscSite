@@ -524,9 +524,10 @@ body {
 @media (min-width: 1200px) {
   .footerSection {
     display: flex;
-    padding: 5rem;
+    padding: 5rem 5rem 0 5rem;
     justify-content: space-between;
     align-items: flex-start;
+    height: 467px;
   }
   .footerSection__info {
     max-width: 20rem;

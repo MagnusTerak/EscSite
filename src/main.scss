@@ -575,9 +575,10 @@ body {
 
     @media (min-width: $layout-breakpoint-large) { 
         display: flex;
-        padding: 5rem;
+        padding: 5rem 5rem 0 5rem;
         justify-content: space-between;
         align-items: flex-start;
+        height: 467px;
 
         &__info {
             max-width: 20rem;
