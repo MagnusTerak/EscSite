@@ -71,6 +71,8 @@ body {
     margin: 0;
   }
   .header__nav__list__item {
+    text-decoration: none;
+    color: white;
     font-size: 1rem;
   }
   .header__nav__list__item:hover {
@@ -119,14 +121,17 @@ body {
   font-size: 1rem;
   height: 66px;
   width: 308px;
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 5px;
   background-color: #8ACFE5;
   color: #011827;
+  text-decoration: none;
 }
 @media (min-width: 1200px) {
   .btnSection__onSite {
@@ -142,8 +147,9 @@ body {
   color: #36769D;
   background-color: transparent;
   border: none;
-  display: block;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5%;
 }
 @media (min-width: 1200px) {
@@ -156,6 +162,9 @@ body {
     text-decoration: none;
     height: 66px;
     width: 308px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0;
   }
 }
@@ -297,6 +306,10 @@ body {
   color: white;
   border: none;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   width: 179.28px;
   height: 44px;
   margin-right: 20px;
@@ -335,7 +348,10 @@ body {
   border: 1.5px solid #8ACFE5;
   color: #8ACFE5;
   border-radius: 5px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   margin-top: 2rem;
   margin-right: auto;
   margin-left: auto;
@@ -376,6 +392,10 @@ body {
   margin-left: 21px;
   margin-bottom: 64px;
   margin-top: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 @media (min-width: 1200px) {
   .friendsSection {
@@ -439,6 +459,10 @@ body {
   height: 66px;
   width: 308px;
   margin-left: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 @media (min-width: 1200px) {
   .onlineSection {
@@ -520,6 +544,10 @@ body {
 .footerSection li {
   list-style-type: none;
   margin: 0;
+}
+.footerSection a {
+  color: white;
+  text-decoration: none;
 }
 @media (min-width: 1200px) {
   .footerSection {
