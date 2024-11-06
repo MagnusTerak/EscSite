@@ -1,26 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-html,
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  font-size: 24px;
-  max-width: 1920px;
-  min-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bigScreen {
-  display: none;
-}
-@media (min-width: 1200px) {
-  .bigScreen {
-    display: block;
-  }
-}
-
 .header {
   background-color: #011827;
 }
@@ -82,27 +60,6 @@ body {
 @media (max-width: 1200px) {
   .header__nav {
     display: none;
-  }
-}
-@media (max-width: 1200px) {
-  .hackerBackground {
-    width: 100%;
-    min-height: 274px;
-    object-fit: cover;
-  }
-  .hackerBackground__desktop {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .hackerBackground {
-    display: none;
-  }
-  .hackerBackground__desktop {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    min-height: 468px;
   }
 }
 @media (min-width: 1200px) {
@@ -178,14 +135,9 @@ body {
     margin-bottom: 6rem;
   }
 }
-@media (max-width: 1200px) {
-  .reviewSection .bigScreen {
-    display: none;
-  }
-}
 .reviewSection__figure {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto;
   margin-top: 4rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -560,6 +512,47 @@ body {
     margin-top: 3.5rem;
     margin-left: 1rem;
     margin-right: 5rem;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-size: 24px;
+  max-width: 1920px;
+  min-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .bigScreen {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hackerBackground {
+    width: 100%;
+    min-height: 274px;
+    object-fit: cover;
+  }
+  .hackerBackground__desktop {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .hackerBackground {
+    display: none;
+  }
+  .hackerBackground__desktop {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    min-height: 468px;
   }
 }
 

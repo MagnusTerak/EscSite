@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primary-btn-color: #E3170A;
+$primary-btn-on-dark: #8ACFE5;
+$dark-blue: #011827;
+$blue: #36769D;
+$grey: #B6BDB5;
+
+$layout-breakpoint-large: 1200px;
+$layout-breakpoint-small: 900px;
+
+@mixin regular-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin bold-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin italic-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin primary-btn {
+    background-color: $primary-btn-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

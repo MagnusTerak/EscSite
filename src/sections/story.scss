@@ -1,0 +1,42 @@
+@use './lib.scss' as *;
+
+.storySection {
+    display: block;
+    margin-top: 10%;
+    height: 500px;
+    background-color: $dark-blue;
+
+    &__text {
+        @include regular-font();
+        font-size: 1.17rem;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 4rem;
+
+        @media (min-width: $layout-breakpoint-large) {
+            width: 50%;
+            margin: auto;
+        }
+    }
+
+    &__btn {
+        @include bold-font();
+        font-size: 1rem; 
+    
+        width: 308px;
+        height: 66px;
+        background-color: transparent;
+        border: 1.5px solid $primary-btn-on-dark;
+        color: $primary-btn-on-dark;
+        border-radius: 5px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

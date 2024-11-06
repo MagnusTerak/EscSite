@@ -1,0 +1,71 @@
+@use './lib.scss' as *;
+
+.header {
+    background-color: $dark-blue;
+
+    &__div {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__logo { 
+        width: 128px;
+        height: 82px;
+        margin-left: 27px;
+        margin-top: 26px;
+    }
+
+    &__text {
+        @include bold-font();
+        color: #FFFFFF;
+        font-size: 1rem;
+        width: 20%;
+        margin-left: 0.8rem;
+        margin-top: 1rem;
+
+        @media (min-width: $layout-breakpoint-large) {
+            width: 100%;
+            font-size: 1.6rem;
+            margin-top: 2.7rem;
+        }
+    }
+}
+
+@media (min-width: $layout-breakpoint-large) { 
+    .header {
+        &__nav {
+            background-color: $dark-blue;
+            display: block;
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+    
+            &__list {
+                @include bold-font();
+                display: flex; 
+                justify-content: space-evenly;
+                list-style: none;
+                color: white;
+                margin: 0;
+        
+                &__item {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1rem;
+                    
+                    &:hover{
+                        color: #8ACFE5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-large) { 
+    .header {
+        &__nav {
+            display: none;
+        }
+    }
+}
