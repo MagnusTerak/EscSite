@@ -13,8 +13,12 @@
                 <div class="header__div">
                     <img class="header__logo" src="src/images/esc-logo.png" alt="Header Logo"></img>
                     <h1 class="header__text">Hacker Escape Rooms</h1>
+                    <button class="header__hamburgerMenu smallScreen">
+                        <img class="header__hamburgerMenu__img" src="./src/images/menu-phone.png">
+                    </button>
                 </div>
-                
+             
+
                 <nav class="header__nav bigScreen">
                     <ul class="header__nav__list">
                         <li><a class="header__nav__list__item" href="#">Play online</a></li>
@@ -25,8 +29,24 @@
                 </nav>
             </header>
 
+            <div class="phoneMenu phoneMenu__visible">
+                <div class="phoneMenu__container">
+                    <button class="phoneMenu__close">
+                        <img src="./src/images/menu-phone-close.png" alt="Phone Menu Close" class="phoneMenu__img">
+                    </button>
+    
+                    <div class="phoneMenu__tagContainer">
+                        <a href="#" class="phoneMenu__tag">Play online</a>
+                        <a href="#" class="phoneMenu__tag">Play on-site</a>
+                        <a href="#" class="phoneMenu__tag">The story</a>
+                        <a href="#" class="phoneMenu__tag">Contact us</a>
+                    </div>
+                </div>
+                <div class="phoneMenu__background"></div>
+            </div>
+
             <img class="hackerBackground" src="src/images/main-background.png" alt="Main Background"></img>
-            <img class="hackerBackground__desktop" src="src/images/mani-background-pc.png" alt="Main Background"></img>
+            <img class="hackerBackground__desktop" src="src/images/main-background-pc.png" alt="Main Background"></img>
 
             <!-- Buttons sections -->
             <section class="btnSection">
@@ -173,5 +193,7 @@
                 </section>
             </footer>
         </container>
+
+        <script src="/script.js"></script>
     </body>
 </html>
