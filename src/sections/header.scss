@@ -1,10 +1,11 @@
 @use './lib.scss' as *;
+@use './keyframes.scss' as keyframe;
 
 .header {
     background-color: $dark-blue;
 
     &__div {
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: flex-start;
     }
@@ -29,6 +30,76 @@
             font-size: 1.6rem;
             margin-top: 2.7rem;
         }
+    }
+
+    &__hamburgerMenu {
+        background-color: transparent;
+        border: none;
+        width: 51px;
+        height: 26px;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+.phoneMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &__container {
+        width: 92%;
+        height: 95%;
+        background-color: $dark-blue;
+        position: fixed;
+        top: 2.5%;
+        left: calc(50% - 46%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    &__visible {
+        display: none;
+    }
+
+    &__close {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 5%;
+        top: 3%;
+    }
+
+    &__tagContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__tag {
+        @include bold-font;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 2rem;
+    }
+
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background-color: #FFFFFF;
+        opacity: 0.5;
     }
 }
 
@@ -58,14 +129,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-@media (max-width: $layout-breakpoint-large) { 
-    .header {
-        &__nav {
-            display: none;
         }
     }
 }
